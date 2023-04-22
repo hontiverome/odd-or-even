@@ -10,5 +10,5 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     # put the numbers from the read file into a list and convert it into integers
     for i in range(20):
         line=integer_file.readline()
-        integers.append(int(line))
+        integers.append(line)
     print(integers)
