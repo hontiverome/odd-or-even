@@ -4,4 +4,6 @@
 # The second text file will be named odd.txt that will contain all odd numbers extracted from the numbers.txt
 
 # read and write the input and output files
-# put the numbers from the read file into a list and convert it into integers 
+with open("numbers.txt", "r") as number_file, open ("even", "w") as even_file, open ("odd", "w") as odd_file:
+    
+# put the numbers from the read file into a list and convert it into integers
