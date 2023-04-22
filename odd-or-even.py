@@ -7,8 +7,8 @@
 # state variables
 integers=[]
 with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
-    # read the 
     # put the numbers from the read file into a list and convert it into integers
-    for i 
-    integers=list(int(integer_file.split()))
+    for i in range(20):
+        line=integer_file.readline()
+        integers.append(int(line))
     print(integers)
