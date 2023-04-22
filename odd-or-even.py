@@ -5,10 +5,7 @@
 
 # read and write the input and output files
 # state variables
-integers=[]
 with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
     # put the numbers from the read file into a list and convert it into integers
-    for i in range(20):
-        line=integer_file.readline()
-        integers.append(line)
+    integers=[line.strip() for line in integer_file]
     print(integers)
