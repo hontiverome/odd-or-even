@@ -4,7 +4,11 @@
 # The second text file will be named odd.txt that will contain all odd numbers extracted from the numbers.txt
 
 # read and write the input and output files
-with open("numbers.txt", "r") as number_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
+# state variables
+integers=[]
+with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
+    # read the 
     # put the numbers from the read file into a list and convert it into integers
-    integers=list(int(number_file.split()))
+    for i 
+    integers=list(int(integer_file.split()))
     print(integers)
