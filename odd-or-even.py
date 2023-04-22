@@ -5,5 +5,5 @@
 
 # read and write the input and output files
 with open("numbers.txt", "r") as number_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
-    
-# put the numbers from the read file into a list and convert it into integers
+    # put the numbers from the read file into a list and convert it into integers
+    integers=list(int(number_file.split()))
