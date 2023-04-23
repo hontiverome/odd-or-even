@@ -24,7 +24,7 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
             print_response=str(input("\nWhat text file would you like to see? (even, odd, both, exit):\n "))
             if print_response=='even':
                 for line in even_file:
-                    print(line.rjust(25))
+                    print(line.strip().rjust(25))
                 
    
 # HONTIVEROS, JEROME ANDREI O. 
