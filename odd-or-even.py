@@ -4,6 +4,7 @@
 # The second text file will be named odd.txt that will contain all odd numbers extracted from the numbers.txt
 
 # read and write the input and output files
+import time
 with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
     contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)\n"))
     while True:
@@ -36,10 +37,22 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
         if response=='y':
             print_response=str(input("\nWhat text file would you like to see? (even, odd, exit):\n "))
             if print_response=='even':
+                print("You chose even.")
+                time.sleep(0.5)
+                even_result=("Here is the even list.\n")
+                for i in range(len(even_result)):
+                    print(even_result[i], end='', flush=True)
+                    time.sleep(0.1)
                 for line in even_file:
                     print(line.strip().rjust(25)+'\n')
                 print('__________________________________________________________________________________________________')
             elif print_response=='odd':
+                print("You chose odd.")
+                time.sleep(0.5)
+                even_result=("Here is the cubed odd list.\n")
+                for i in range(len(even_result)):
+                    print(even_result[i], end='', flush=True)
+                    time.sleep(0.1)
                 for line in odd_file:
                     print(line.strip().rjust(25)+'\n')
                 print('__________________________________________________________________________________________________')
