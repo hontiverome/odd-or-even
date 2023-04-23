@@ -29,9 +29,10 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
                 for line in odd_file:
                     print(line.strip().rjust(25)+'\n')
             elif print_response=='exit':
-                    exit()
+                exit()
             else:
                 print("Invalid")
+                print("____________________________________________________________________________________________________")
    
 # HONTIVEROS, JEROME ANDREI O. 
 # BSCPE 1-5
