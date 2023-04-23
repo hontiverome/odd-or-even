@@ -8,18 +8,19 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
     while True:
         if contents=='y':
-            for line in integer_file:
-                print(line.strip().rjust(25)+'\n')
+            integers=[lines.strip() for lines in integer_file]
+            integer_list=[int(j) for j in integers]
+            print(integer_list)
             break
         elif contents=='n':
+            integers=[lines.strip() for lines in integer_file]
+            integer_list=[int(j) for j in integers]
             break
         else:
             print("invalid")
             contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
             continue
     # put the numbers from the read file into a list and convert it into integers
-    integers=[lines.strip() for lines in integer_file]
-    integer_list=[int(j) for j in integers]
     # iterate the list
     for num in integer_list:
     # identify whether integer is even or odd using mod
@@ -43,13 +44,13 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
                     print(line.strip().rjust(25)+'\n')
                 print('__________________________________________________________________________________________________')
             elif print_response=='exit':
-                print("Thank you.")
+                print("\nThank you.")
                 exit()
             else:
                 print("Invalid")
                 print("____________________________________________________________________________________________________")
         elif response=='n':
-            print("Thank you.")
+            print("\nThank you.")
             exit()
         else:
             print("Invalid")
