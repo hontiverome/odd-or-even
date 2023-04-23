@@ -18,3 +18,6 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     # if even, write it to "even.txt" file
         else:
             even_file.write(str(num)+"\n")
+
+# HONTIVEROS, JEROME ANDREI O. 
+# BSCPE 1-5
