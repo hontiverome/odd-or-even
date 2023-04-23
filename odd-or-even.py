@@ -5,6 +5,18 @@
 
 # read and write the input and output files
 with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
+    contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
+    while True:
+        if contents=='y':
+            for line in integer_file:
+                print(line.strip().rjust(25)+'\n')
+                break
+        elif contents=='n':
+            break
+        else:
+            print("invalid")
+            contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
+            continue
     # put the numbers from the read file into a list and convert it into integers
     integers=[line.strip() for line in integer_file]
     integer_list=[int(j) for j in integers]
