@@ -21,11 +21,17 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
     response=str(input("\nWould you like to print out the contents of the text files? (y or n only):\n "))
     while True:
         if response=='y':
-            print_response=str(input("\nWhat text file would you like to see? (even, odd, both, exit):\n "))
+            print_response=str(input("\nWhat text file would you like to see? (even, odd, exit):\n "))
             if print_response=='even':
                 for line in even_file:
-                    print(line.strip().rjust(25))
-                
+                    print(line.strip().rjust(25)+'\n')
+            elif print_response=='odd':
+                for line in odd_file:
+                    print(line.strip().rjust(25)+'\n')
+            elif print_response=='exit':
+                    exit()
+            else:
+                print("Invalid")
    
 # HONTIVEROS, JEROME ANDREI O. 
 # BSCPE 1-5
