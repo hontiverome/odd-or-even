@@ -9,6 +9,12 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     # put the numbers from the read file into a list and convert it into integers
     integers=[line.strip() for line in integer_file]
     integer_list=[int(j) for j in integers]
+    # iterate the list
+    for num in integer_list:
     # identify whether integer is even or odd using mod
     # if odd, write it to "odd.txt" file
+        if num%2==1:
+            odd_file.write(int(num))
     # if even, write it to "even.txt" file
+        else:
+            even_file.write(int(num))
