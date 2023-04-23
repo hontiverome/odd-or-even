@@ -14,7 +14,7 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     # identify whether integer is even or odd using mod
     # if odd, write it to "odd.txt" file
         if num%2==1:
-            odd_file.write(str(num))
+            odd_file.write(str(num)+"\n")
     # if even, write it to "even.txt" file
         else:
-            even_file.write(str(num))
+            even_file.write(str(num)+"\n")
