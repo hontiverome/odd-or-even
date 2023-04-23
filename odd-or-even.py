@@ -11,6 +11,7 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
             for line in integer_file:
                 print(line.strip().rjust(25)+'\n')
                 break
+            break
         elif contents=='n':
             break
         else:
