@@ -17,14 +17,14 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
     # if even, write it to "even.txt" file
         else:
             even_file.write(str(num)+"\n")
-with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as o0dd_file:
-    response=str(input("\nWould you like to print out the contents of the text files? (y or n only)"))
+with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
+    response=str(input("\nWould you like to print out the contents of the text files? (y or n only):\n "))
     while True:
         if response=='y':
-            print_response=str(input("\nWhat text file would you like to see? (even, odd, both)"))
+            print_response=str(input("\nWhat text file would you like to see? (even, odd, both, exit):\n "))
             if print_response=='even':
                 for line in even_file:
-                    print(line.strip().rjust(25))
+                    print(line.rjust(25))
                 
    
 # HONTIVEROS, JEROME ANDREI O. 
