@@ -5,7 +5,7 @@
 
 # read and write the input and output files
 with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_file, open ("odd.txt", "w") as odd_file:
-    contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
+    contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)\n"))
     while True:
         if contents=='y':
             # put the numbers from the read file into a list and convert it into integers
@@ -19,7 +19,7 @@ with open("numbers.txt", "r") as integer_file, open ("even.txt", "w") as even_fi
             break
         else:
             print("invalid")
-            contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)"))
+            contents=str(input("Would you like to see the contents of 'numbers.txt?' (y or n)\n"))
             continue
     # iterate the list
     for num in integer_list:
@@ -44,7 +44,7 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
                     print(line.strip().rjust(25)+'\n')
                 print('__________________________________________________________________________________________________')
             elif print_response=='exit':
-                print("Thank you.")
+                print("\nThank you.")
                 exit()
             else:
                 print("Invalid")
