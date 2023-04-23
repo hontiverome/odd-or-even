@@ -49,7 +49,7 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
             elif print_response=='odd':
                 print("You chose odd.")
                 time.sleep(0.5)
-                even_result=("Here is the cubed odd list.\n")
+                even_result=("Here is the odd list.\n")
                 for i in range(len(even_result)):
                     print(even_result[i], end='', flush=True)
                     time.sleep(0.1)
