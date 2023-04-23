@@ -25,10 +25,13 @@ with open ("even.txt", "r") as even_file, open ("odd.txt", "r") as odd_file:
             if print_response=='even':
                 for line in even_file:
                     print(line.strip().rjust(25)+'\n')
+                    print('__________________________________________________________________________________________________')
             elif print_response=='odd':
                 for line in odd_file:
                     print(line.strip().rjust(25)+'\n')
+                    print('__________________________________________________________________________________________________')
             elif print_response=='exit':
+                print("Thank you.")
                 exit()
             else:
                 print("Invalid")
